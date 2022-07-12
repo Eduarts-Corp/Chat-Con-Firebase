@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+
+        <script>
+            
+  const firebaseConfig = {
+    apiKey: "AIzaSyBws9Xd9Chil0UVBtk8I_nxjmqPKwtgv2w",
+    authDomain: "bootstrap-chat-c2d59.firebaseapp.com",
+    projectId: "bootstrap-chat-c2d59",
+    storageBucket: "bootstrap-chat-c2d59.appspot.com",
+    messagingSenderId: "659522970696",
+    appId: "1:659522970696:web:8db01226680cacf101647d"
+  };  
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+</script>
+
+<style>
+    .container-chat{
+        height:calc(100vh - 175px); 
+        overflow-y: scroll; 
+    }
+</style>
+
+</head>
+<body>
+
+    <!-- Aca vamos a tener la barra de inicio con el m¿nombre del chat y los botones  -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand" id="nombreUsuario">Bootstrap Chat</a>
+            <div>
+                <button class="btn btn-primary" id="btnIngreso">Ingresar</button>
+                <button class="btn btn-danger" id="btnCerrarSesion">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Aca en el mainvamos a pintar los chat. -->
+
+    <main class="container py-3 container-chat" id="contenidoWeb">
+        <!-- <div class="text-start">
+            <span class="badge bg-secondary">Secondary</span>
+        </div>
+        <div class="text-end">
+            <span class="badge bg-primary">Yo</span>
+        </div> -->
+    </main>
+
+<!-- Aca vamos a hacer el formulario  -->
+
+<form id="formulario"
+       class="container mb-2 fixed-bottom d-none">
+
+    <input type="text" class="form-control" placeholder="..." id="texto">
+    <button class="btn btn-warning w-100 mt-2"
+            type="submit">
+    
+            Enviar
+
+    </button>
+</form>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <script src="/js/app.js"></script>
+   
+</body>
+</html>
